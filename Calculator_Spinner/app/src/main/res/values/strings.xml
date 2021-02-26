@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Calculator_Spinner</string>
+    <string name="FirstNumberEThint">Enter Number Here</string>
+    <string name="SecondNumberEThint">Enter Number Here</string>
+    <string name="calculateBtn">Calculate</string>
+    <string name="clearBtn">Clear</string>
+    <string name="resultsTVhint">Calculation will appear Here</string>
+
+    <string-array name="operators">
+        <item></item>
+        <item>+</item>
+
+        <item>-</item>
+
+        <item>*</item>
+
+        <item>/</item>
+
+        <item>%</item>
+    </string-array>
+
+</resources>

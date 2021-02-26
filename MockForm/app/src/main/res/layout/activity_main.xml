@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2196F3"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#BDDAF1"
+        android:gravity="center|end"
+        android:text="@string/nameTV"
+        android:importantForAutofill="no"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#BDDAF1"
+        android:gravity="center|end"
+        android:text="@string/addressTV"
+        android:importantForAutofill="no"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#BDDAF1"
+        android:gravity="center|end"
+        android:text="@string/cityTV"
+        android:importantForAutofill="no"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+
+    <TextView
+        android:id="@+id/tvZipCode"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:background="#BDDAF1"
+        android:gravity="center|end"
+        android:importantForAutofill="no"
+        android:text="@string/zipCodeTV"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerState" />
+
+    <Spinner
+        android:id="@+id/spinnerState"
+        android:layout_width="352dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:drawable/spinner_dropdown_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCity" />
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="53dp"
+        android:background="#BDDAF1"
+        android:gravity="center|end"
+        android:text="@string/genderTV"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvZipCode" />
+
+    <TextView
+        android:id="@+id/tvShift"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#BDDAF1"
+        android:gravity="center|end"
+        android:text="@string/shiftTV"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgGender" />
+
+    <EditText
+        android:id="@+id/etZipCode"
+        android:layout_width="270dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/zipCodeEThint"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvZipCode"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerState" />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="257dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/tvGender"
+        app:layout_constraintTop_toBottomOf="@+id/etZipCode">
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/maleRB" />
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/femaleRB" />
+
+
+        <RadioButton
+            android:id="@+id/rbNoAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:checked="true"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/noAnswerRB" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbMorning"
+        android:layout_width="100dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginRight="82dp"
+        android:background="@color/white"
+        android:checked="true"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/morningCB"
+        app:layout_constraintEnd_toStartOf="@+id/cbAfternoon"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toEndOf="@+id/tvShift"
+        app:layout_constraintTop_toBottomOf="@+id/rgGender" />
+
+    <CheckBox
+        android:id="@+id/cbAfternoon"
+        android:layout_width="114dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@color/white"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/afternoonCB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgGender" />
+
+    <CheckBox
+        android:id="@+id/cbEvening"
+        android:layout_width="99dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginLeft="196dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/eveningCB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbMorning" />
+
+    <TextView
+        android:id="@+id/tvSettings"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:background="#BDDAF1"
+        android:gravity="center|end"
+        android:text="@string/settingsTV"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbEvening" />
+
+    <ToggleButton
+        android:id="@+id/tbSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:checked="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/togglebutton"
+        app:layout_constraintEnd_toStartOf="@+id/ibGoSign"
+        app:layout_constraintStart_toEndOf="@+id/tvSettings"
+        app:layout_constraintTop_toBottomOf="@+id/cbEvening"
+        tools:text="@string/offOnToggle" />
+
+    <ImageButton
+        android:id="@+id/ibGoSign"
+        android:layout_width="87dp"
+        android:layout_height="78dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:contentDescription="@string/imageButtonGo"
+        android:onClick="@string/imageButtonGo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbEvening"
+        tools:srcCompat="@drawable/go" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="@string/nameEThint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="@string/addressEThint"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAddress"
+        app:layout_constraintTop_toBottomOf="@+id/etName"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/etCity"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="@string/cityEThint"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvCity"
+        app:layout_constraintTop_toBottomOf="@+id/etAddress"
+        android:importantForAutofill="no" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

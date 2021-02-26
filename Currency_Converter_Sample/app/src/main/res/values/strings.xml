@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="app_name">CurrencyConverter</string>
+    <string name="textViewTitle">Currency Converter</string>
+    <string name="textViewFrom">FROM:</string>
+    <string name="textViewTo">TO:</string>
+    <string name="editTextAmount">Amount to Convert</string>
+    <string name="buttonConvert">Convert</string>
+    <string name="imageViewHint">Currency Conversion Image</string>
+    <string-array name="currencies_array">
+        <item>US Dollar</item>
+        <item>Euro</item>
+        <item>Japanese Yen</item>
+        <item>British Pound</item>
+    </string-array>
+    <string name="resultsTV"></string>
+    <string name="money_imageView_Hint">Various Monies Image</string>
+    <string name="mainPageBTN">Main Page</string>
+</resources>
