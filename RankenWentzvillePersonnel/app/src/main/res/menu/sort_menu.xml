@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuSortLastNameAscending"
+        android:title="@string/lastNameAscMnu" />
+    <item
+        android:id="@+id/menuSortLastNameDescending"
+        android:title="@string/lastNameDescMnu" />
+    <item
+        android:id="@+id/menuSortDivisionAscending"
+        android:title="Division Ascending" />
+    <item
+        android:id="@+id/menuSortDivisionDescending"
+        android:title="Division Descending" />
+</menu>

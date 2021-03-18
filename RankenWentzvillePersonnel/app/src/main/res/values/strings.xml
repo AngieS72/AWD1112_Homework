@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Ranken Wentzville Personnel</string>
+    <string name="mainTitleTV">Ranken Wentzville Personnel</string>
+    <string name="addEditBTN">Add or Edit Personnel</string>
+    <string name="addTitleTV">Add Or Edit Member</string>
+    <string name="idTV">ID: </string>
+    <string name="firstNameTV">First Name: </string>
+    <string name="lastNameTV">Last Name: </string>
+    <string name="divNameTV">Div. Name: </string>
+    <string name="imageTV">Image: </string>
+    <string name="idHint">ID Here</string>
+    <string name="firstNameHint">First Name Here</string>
+    <string name="lastNameHint">Last Name Here</string>
+    <string name="divNameHint">Division Name Here</string>
+    <string name="imageHint">Division Picture Here</string>
+    <string name="saveBTN">Save</string>
+    <string name="cancelBTN">Cancel</string>
+    <string name="onePersonnelContentDescription">Personnel File Image</string>
+    <string name="lastNameAscMnu">Last Name Ascending</string>
+    <string name="lastNameDescMnu">Last Name Descending</string>
+    <string name="divisionAscMnu">Term Ascending</string>
+    <string name="divisionDescMnu">Term Descending</string>
+</resources>

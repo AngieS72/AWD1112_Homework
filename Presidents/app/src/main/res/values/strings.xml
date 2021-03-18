@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Presidents</string>
+    <string name="addPresidentBtn">Add President</string>
+    <string name="saveBtn">Save</string>
+    <string name="cancelBtn">Cancel</string>
+    <string name="onePresidentContentDesc">President Image</string>
+    <string name="idHint">ID</string>
+    <string name="firstNameHint">First Name</string>
+    <string name="lastNameHint">Last Name</string>
+    <string name="servedHint">Served</string>
+    <string name="imageURLHint">Image URL</string>
+    <string name="idTv">ID:</string>
+    <string name="firstNameTv">First Name:</string>
+    <string name="lastNameTv">Last Name:</string>
+    <string name="servedTv">Served:</string>
+    <string name="imageURLTv">Image URL:</string>
+    <string name="lastNameAscMnu">Last Name Ascending</string>
+    <string name="lastNameDescMnu">Last Name Descending</string>
+    <string name="termAscMnu">Term Ascending</string>
+    <string name="termDescMnu">Term Descending</string>
+</resources>

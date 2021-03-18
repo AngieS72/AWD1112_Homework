@@ -46,9 +46,6 @@ public class MainActivity extends AppCompatActivity {
     String state;
     String zip;
     String gender;
-    String male;
-    String Female;
-    String Decline;
     String shift;
     String on;
     String off;
@@ -73,8 +70,9 @@ public class MainActivity extends AppCompatActivity {
         cbEvening = findViewById(R.id.cbEvening);
         tbSettings = findViewById(R.id.tbSettings);
         /*Add in Oncreate() funtion after setContentView()*/
-        ImageButton imageButton  = (ImageButton)findViewById(R.id.ibGoSign);
+        ImageButton ibGoSign  = findViewById(R.id.ibGoSign);
         ibGoSign.setImageResource(R.drawable.go); //set the image programmatically
+
         //  Initialize global variables
         keepGoing = true;       //Program continue variable
         String name = "";
@@ -84,8 +82,6 @@ public class MainActivity extends AppCompatActivity {
         String zip = "";
         String gender = "";
         String shift = "";
-        String on = "";
-        String off = "";
         String results = "";
 
 
