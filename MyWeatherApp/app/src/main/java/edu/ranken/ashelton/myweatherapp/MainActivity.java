@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvResults;
     TextView tvMinTemp;
     TextView tvMaxTemp;
+    ImageView ivLogo;
     Button btnGetTemperature;
     Button btnClear;
 
@@ -40,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
         //Get referecnces to widgets
         etCity = findViewById(R.id.etCity);
         tvResults = findViewById(R.id.tvResults);
+        tvMinTemp = findViewById(R.id.tvMinTemp);
+        tvMaxTemp = findViewById(R.id.tvMaxTemp);
+
         btnGetTemperature = findViewById(R.id.btnGetTemperature);
         btnClear = findViewById(R.id.btnClear);
 
@@ -55,14 +62,26 @@ public class MainActivity extends AppCompatActivity {
         // Associate Retrofit object with APICall
         apiCall = retrofit.create(APICall.class);
 
+      /*  //Have image fade in on start
+        ImageView image = (ImageView) findViewById(R.id.imageView);
+        Animation animation1 =
+                AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.fade);
+        image.startAnimation(animation1);
+*/
+
+
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 etCity.setText("");
                 tvResults.setText("");
+                tvMinTemp.setText("");
+                tvMaxTemp.setText("");
                 etCity.requestFocus();
             }
         });
+
 
         btnGetTemperature.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +89,16 @@ public class MainActivity extends AppCompatActivity {
                 // Code that fires when Get Temp button is clicked
                 //Get weather information.  The city is from whatever user enters in etCity
                 // and the key is from api key openweathermap.org.
+
+                //Have image fade in on start
+// Commented out - could not get it to work.  Will keep trying but commented out for due date.
+                 /*   ImageView image = (ImageView) findViewById(R.id.imageView);
+                    Animation animation1 =
+                            AnimationUtils.loadAnimation(getApplicationContext(),
+                                    R.anim.fade);
+                    image.startAnimation(animation1);*/
+
+
                 try {
                     if (etCity.getText().toString().trim().equals("")) {
                         throw new IllegalArgumentException();
@@ -98,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                             WeatherInformation weatherInformation = response.body();
                             double theTemperature = weatherInformation.getMainData().getTemperature();
                             double theMinTemp = weatherInformation.getMainData().getTempMin();
+                            double theMaxTemp = weatherInformation.getMainData().getTempMax();
 
                             String theText = "The current temperature in\n";
                             // Convert the temp from K to F
@@ -106,10 +136,15 @@ public class MainActivity extends AppCompatActivity {
                                     " is " + Math.round(theTemperature) + "\u00B0";
                             tvResults.setText(theText);
 
-                            String theMinTempText = "Minimum Temp: " + Math.round(theMinTemp) + "\u00B0";
-                           // theMinTempText += Math.round(theMinTemp) + "\u00B0";
+                            String theMinTempText = "Minimum Temp: ";
+                            theMinTemp = (theMinTemp  - 273.15) * 1.8 + 32;
+                            theMinTempText += Math.round(theMinTemp) + "\u00B0";
                             tvMinTemp.setText(theMinTempText);
 
+                            String theMaxTempText = "Maximum Temp: ";
+                            theMaxTemp = (theMaxTemp  - 273.15) * 1.8 + 32;
+                            theMaxTempText += Math.round(theMaxTemp) + "\u00B0";
+                            tvMaxTemp.setText(theMaxTempText);
                         }
 
                         //what you want it to do if it doesn't work. this should never happen

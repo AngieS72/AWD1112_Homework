@@ -16,4 +16,10 @@ public class MainData {
 
     public double getTempMin() {return tempMin;}
 
+    @SerializedName("temp_max")
+    private double tempMax;
+
+    public double getTempMax() {
+        return tempMax;
+    }
 }
